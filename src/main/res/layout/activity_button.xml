@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮1"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:background="#F44336"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn2"
+        android:textColor="#FFFFEB3B"
+        android:text="按钮2"
+        android:textSize="30sp"
+        android:layout_below="@id/btn1"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/btn3"
+        android:layout_below="@id/btn2"
+        android:layout_marginTop="20dp"
+        android:text="按钮3"
+        android:textSize="30sp"
+        android:background="@drawable/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮4"
+        android:textSize="30sp"
+        android:background="@drawable/btn4"
+        android:layout_marginTop="20dp"
+        android:onClick="showToast"
+        android:layout_below="@id/btn3"/>
+    <TextView
+        android:id="@+id/textd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Text"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_below="@id/btn4"/>
+</RelativeLayout>

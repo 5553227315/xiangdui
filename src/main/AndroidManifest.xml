@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.buju">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/hongda"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/hongda"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".http.SocketClientActivity"></activity>
+        <activity android:name=".http.SocketServerService" />
+        <activity android:name=".http.WWWActivity" />
+        <activity android:name=".http.TextThread" />
+        <activity
+            android:name=".Main2Activity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".datastorage.FileActivity" />
+        <activity android:name=".datastorage.SharedPreferencesActivity" />
+        <activity android:name=".datastorage.DataStorageActivity" />
+        <activity android:name=".shijianjizhi.HandlerActivity" />
+        <activity android:name=".shijianjizhi.EventActivity" />
+        <activity android:name=".UI.fragment.ContainerActivity" />
+        <activity
+            android:name=".UI.jump.BActivity"
+            android:label="B" />
+        <activity
+            android:name=".UI.jump.AActivity"
+            android:label="A" /> <!-- android:launchMode="singleTask" -->
+        <activity android:name=".UI.LifeCycleActivity" />
+        <activity
+            android:name=".UI.PopupWindowActivity"
+            android:label="PopupWindow展示" />
+        <activity
+            android:name=".UI.customDialog.CustomDialogActivity"
+            android:label="自定义弹窗展示" />
+        <activity
+            android:name=".UI.ProgressActivity"
+            android:label="加载展示" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".UI.DialogActivity"
+            android:label="弹窗展示" />
+        <activity
+            android:name=".UI.ToastActivity"
+            android:label="提示展示" />
+        <activity
+            android:name=".UI.WebViewActivity"
+            android:label="网页展示" />
+        <activity
+            android:name=".UI.recyclerview.PuRecyclerViewActivity"
+            android:label="瀑布流展示" />
+        <activity
+            android:name=".UI.recyclerview.GridRecyclerViewActivity"
+            android:label="网络视图展示" />
+        <activity
+            android:name=".UI.recyclerview.HorRecyclerViewActivity"
+            android:label="水平滚动" />
+        <activity
+            android:name=".UI.recyclerview.LinearRecyclerViewActivity"
+            android:label="列表视图" />
+        <activity
+            android:name=".UI.recyclerview.RecyclerViewActivity"
+            android:label="多元展示" />
+        <activity
+            android:name=".UI.ImageViewActivity"
+            android:label="ImageView展示" />
+        <activity
+            android:name=".UI.CheckboxActivity"
+            android:label="多选展示" />
+        <activity
+            android:name=".UI.RatioButtonActivity"
+            android:label="单选展示" />
+        <activity
+            android:name=".UI.EditTextActivity"
+            android:label="EditText展示" />
+        <activity
+            android:name=".UI.ButtonActivity"
+            android:label="按钮展示" />
+        <activity
+            android:name=".UI.gridview.GridViewActivity"
+            android:label="网络视图展示" />
+        <activity
+            android:name=".UI.listview.ListViewActivity"
+            android:label="列表展示" />
+        <activity
+            android:name=".UI.TextViewActivity"
+            android:label="Text展示" />
+        <activity
+            android:name=".UIActivity"
+            android:label="UI目录" />
+
+        <service
+            android:name=".http.SocketServerService"
+            android:process=":remote" />
+    </application>
+
+</manifest>

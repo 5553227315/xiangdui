@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/xiancheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分线程"/>
+    <Button
+        android:id="@+id/btn_SocketClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SocketClient"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_http"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取数据"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

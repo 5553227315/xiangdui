@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+ >
+    <EditText
+        android:layout_marginTop="50dp"
+        android:id="@+id/et_1"
+        android:layout_width="match_parent"
+        android:hint="用户名"
+        android:paddingLeft="10dp"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:textColor="#ff6699"
+        android:background="@drawable/bg_et1"
+        android:drawableLeft="@mipmap/yonghu"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        android:inputType="none"/>
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="密码"
+        android:layout_below="@id/et_1"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:background="@drawable/bg_et1"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"
+        android:drawableLeft="@mipmap/mima"
+        android:drawablePadding="5dp"/>
+    <Button
+        android:id="@+id/denglu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_2"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn4"
+        android:textSize="30sp"
+        android:text="登录"
+        android:textColor="#000000"/>
+
+
+</RelativeLayout>
