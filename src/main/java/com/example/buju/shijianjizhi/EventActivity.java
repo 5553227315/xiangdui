@@ -30,7 +30,7 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         mBtnNoNameClassOnClick=findViewById(R.id.nimingnibu);
         mBtnSjyInLei=findViewById(R.id.sjyinlei);
         mBtnWaibuclass=findViewById(R.id.waibulei);
-//        myButton=findViewById(R.id.mybutton);
+        myButton=findViewById(R.id.mybutton);
         mBtnHandler=findViewById(R.id.handler);
         mBtnHandler.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,14 +71,14 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
             ToastUtil.showMsg(EventActivity.this,"用内部类点了一下");
         }
     }
-//    public void show(View view){
-//        switch (view.getId()){
-//            case R.id.shuxing:
-//                ToastUtil.showMsg(EventActivity.this,"通过设置属性点了一下");
-//                break;
-//        }
-//
-//    }
+    public void show(View view){
+        switch (view.getId()){
+            case R.id.shuxing:
+                ToastUtil.showMsg(EventActivity.this,"通过设置属性点了一下");
+                break;
+        }
+
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

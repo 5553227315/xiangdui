@@ -38,7 +38,7 @@ public class Main2Activity extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(Main2Activity.this,M1Activity.class);
+                Intent intent=new Intent(Main2Activity.this,MainActivity.class);
                 Main2Activity.this.finish();
                 startActivity(intent);
 
