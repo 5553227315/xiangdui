@@ -24,17 +24,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="外部类点击事件"/>
-    <Button
-        android:id="@+id/shuxing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="通过属性设置点击事件"
-        android:onClick="show"/>
-    <com.example.buju.shijianjizhi.MyButton
-        android:id="@+id/mybutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="回调事件"/>
+    <!--<Button-->
+        <!--android:id="@+id/shuxing"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="通过属性设置点击事件"-->
+        <!--android:onClick="show"/>-->
+    <!--<com.example.buju.shijianjizhi.MyButton-->
+        <!--android:id="@+id/mybutton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="回调事件"/>-->
     <Button
         android:id="@+id/handler"
         android:layout_width="match_parent"

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/hongda"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".http.SocketClientActivity"></activity>
+        <activity android:name=".M1Activity"></activity>
+        <activity android:name=".http.SocketClientActivity" />
         <activity android:name=".http.SocketServerService" />
         <activity android:name=".http.WWWActivity" />
         <activity android:name=".http.TextThread" />

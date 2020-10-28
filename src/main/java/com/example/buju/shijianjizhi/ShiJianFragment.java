@@ -1,86 +1,85 @@
 package com.example.buju.shijianjizhi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.buju.R;
 import com.example.buju.util.ToastUtil;
 
-public class EventActivity extends AppCompatActivity implements View.OnClickListener{
+public class ShiJianFragment extends Fragment {
     private Button mBtnClassOnClick;
     private Button mBtnNoNameClassOnClick;
     private Button mBtnSjyInLei;
     private Button mBtnWaibuclass;
     private MyButton myButton;
     private Button mBtnHandler;
-
-
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
-        mBtnClassOnClick=findViewById(R.id.btn_neibulei);
-        mBtnNoNameClassOnClick=findViewById(R.id.nimingnibu);
-        mBtnSjyInLei=findViewById(R.id.sjyinlei);
-        mBtnWaibuclass=findViewById(R.id.waibulei);
-//        myButton=findViewById(R.id.mybutton);
-        mBtnHandler=findViewById(R.id.handler);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_event, container,false);
+        mBtnClassOnClick=view.findViewById(R.id.btn_neibulei);
+        mBtnNoNameClassOnClick=view.findViewById(R.id.nimingnibu);
+        mBtnSjyInLei=view.findViewById(R.id.sjyinlei);
+        mBtnWaibuclass=view.findViewById(R.id.waibulei);
+//        myButton=view.findViewById(R.id.mybutton);
+        mBtnHandler=view.findViewById(R.id.handler);
+
         mBtnHandler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(EventActivity.this, HandlerActivity.class);
+                Context context = getActivity();
+                Intent intent=new Intent(context, HandlerActivity.class);
                 startActivity(intent);
             }
         });
+
         //内部类点击事件
         mBtnClassOnClick.setOnClickListener(new OnClick());
         //匿名内部类点击事件
         mBtnNoNameClassOnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtil.showMsg(EventActivity.this,"匿名用内部类点了一下");
+                Context context = getActivity();
+                ToastUtil.showMsg(context,"匿名用内部类点了一下");
             }
         });
+        Context context=getActivity();
         //通过事件源所在的类实现
-        mBtnSjyInLei.setOnClickListener(EventActivity.this);
+        mBtnSjyInLei.setOnClickListener((View.OnClickListener) context);
         //通过外部类
-        mBtnWaibuclass.setOnClickListener(new MyClickListener(EventActivity.this));
-
-
-
-
+        mBtnWaibuclass.setOnClickListener(new MyClickListener(context));
+        return view;
     }
+
     public void onClick(View v){
+        Context context = getActivity();
         switch (v.getId()){
+
             case R.id.sjyinlei:
-                ToastUtil.showMsg(EventActivity.this,"通过事件源所在的类点了一下");
+                ToastUtil.showMsg(context,"通过事件源所在的类点了一下");
                 break;
         }
     }
     class OnClick implements View.OnClickListener{
+        Context context = getActivity();
 
         @Override
         public void onClick(View view) {
-            ToastUtil.showMsg(EventActivity.this,"用内部类点了一下");
+            ToastUtil.showMsg(context,"用内部类点了一下");
         }
     }
-//    public void show(View view){
-//        switch (view.getId()){
-//            case R.id.shuxing:
-//                ToastUtil.showMsg(EventActivity.this,"通过设置属性点了一下");
-//                break;
-//        }
-//
-//    }
 
-    @Override
+
+
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
@@ -89,4 +88,6 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         }
         return false;
     }
+
+
 }
